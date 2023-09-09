@@ -20,7 +20,7 @@ function showNavIcon(liElement) {
         navIcon.classList.add("show-element")
 
         navIcon.style.transition = 'all 1s ease';
-        navIcon.style.transform = 'translateY(45px) rotate(90deg)';
+        navIcon.style.transform = 'translateY(45px) rotate(180deg)';
     }
 }
 

@@ -27,6 +27,7 @@ h1 {
     color: white;
     padding-right: 60px;
     padding-left: 60px;
+    margin-bottom: 150px;
 }
 
 #header-pic {
@@ -69,28 +70,44 @@ nav a {
     right: 80px;
 }
 
-#cover-div1 {
-    width: 40px;
+/* Handling the icons, they needed alittle custom position */
+#order-online-nav img {
+    right: 120px;
+}
 
-    height: 40px;
+#menu-nav img {
+    right: 45px;
+}
+
+#home-nav img {
+    right: 35px;
+
+}
+
+
+.cover-div {
+    width: 800px;
+    /* Fixa */
+    left: -200px;
+    height: 43px;
     z-index: 3;
-    background-color: blue;
-    bottom: 34px;
-    right: 80px;
+    background-color: var(--italian-red);
+    bottom: 33px;
+    /* right: 10px; */
     position: absolute;
 
 }
 
 ul {
     list-style-type: none;
-    /* text-align: center; */
+
     max-width: 800px;
     margin: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    /* margin: 0px; */
+
     justify-content: space-around;
 }
 
