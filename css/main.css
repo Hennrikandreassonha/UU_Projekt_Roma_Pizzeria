@@ -46,11 +46,6 @@ h1 {
     /* ... (other styles) ... */
 }
 
-#cover-div{
-    height:40px;
-    background-color: var(--italian-red);
-    z-index: 1;
-}
 nav {
     background-color: var(--italian-green);
     text-align: center;
@@ -60,7 +55,6 @@ nav {
 nav a {
     color: var(--italian-white);
     text-decoration: none;
-    margin: 0 20px;
 
     position: relative;
     z-index: 1;
@@ -69,22 +63,38 @@ nav a {
 .nav-icon {
     width: 40px;
     position: absolute;
-    
+
     z-index: 2;
-    bottom:34px;
-    right:80px;
+    bottom: 34px;
+    right: 80px;
+}
+
+#cover-div1 {
+    width: 40px;
+
+    height: 40px;
+    z-index: 3;
+    background-color: blue;
+    bottom: 34px;
+    right: 80px;
+    position: absolute;
+
 }
 
 ul {
     list-style-type: none;
     /* text-align: center; */
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 0px;
-    margin: 0px;
+    /* margin: 0px; */
+    justify-content: space-around;
 }
 
 li {
-    display: inline-block;
     margin-left: 40px;
     position: relative;
 }
@@ -104,11 +114,4 @@ footer {
     color: var(--italian-white);
     text-align: center;
     padding: 10px;
-}
-
-.hide-element{
-    opacity: 0;
-}
-.show-element{
-    opacity: 1;
 }
