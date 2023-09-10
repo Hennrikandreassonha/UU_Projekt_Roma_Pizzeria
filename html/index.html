@@ -28,7 +28,7 @@
                 <img src="/icons/pizza.png" class="nav-icon" alt="Home">
             </li>
 
-            <li id="menu-nav"><a href="/html/">Meny</a>
+            <li id="menu-nav"><a href="/html/menu.html">Meny</a>
                 <img src="/icons/menu.png" class="nav-icon" alt="Home">
             </li>
 
@@ -36,7 +36,7 @@
                 <img src="/icons/delivery-man.png" class="nav-icon" alt="Home">
             </li>
 
-            <li><a href="#">Vår historia</a>
+            <li><a href="/html/history.html">Vår historia</a>
                 <img src="/icons/history.png" class="nav-icon" alt="Home">
             </li>
 
@@ -44,22 +44,71 @@
     </nav>
 
     <main>
-        <section id="section 1">
-            <h2>Section 1 </h2>
-            <p>Kanske lite information om </p>
-        </section>
 
-        <section id="section 2">
-            <h2>Section 2 </h2>
-            <p>Här kan man ha nåt mer </p>
+        <div id="grid-container">
 
-        </section>
+            <div>
+                <section>
+                    <h2>Välkommen till Roma Pizzeria</h2>
+                    <p>På Roma pizzeria serveras alltid autentisk italiensk pizza med turkiska inslag</p>
+                    <p>Välkommen att utforska vår meny, beställ pizza, eller varför inte pröva vår nya funktion food-finder</p>
+                </section>
+
+                <section id="news">
+
+                    <h2>Nyheter</h2>
+
+                    <article>
+                        <h3>Pizzeria Roma önskar er en härlig sommar!</h3>
+                        <p>bilder o så här</p>
+                    </article>
+
+                    <article>
+                        <h3>Pizzeria Roma vinner Lilla Edets bästa pizza!</h3>
+                        <p>bilder o så här</p>
+                    </article>
+
+                    <article>
+                        <h3>Ny medarbetare!</h3>
+                        <p>Vi kan med glädje presentera vår nya pizzabakare <strong>Hassan</strong></p>
+                        <p>Hassan har nyligen flyttat från Irak och har tidigare arbetat inom kebabteknik inom Irakiska
+                            försvaret</p>
+
+                        <h3>Intervju</h3>
+                        <p>Hej Hassan vad roligt att du börjat hos oss. Vilken är din <i>favoritpizza</i>?</p>
+                        <p>Hmm svårt val med måste ändå säga <u>kycklingkebabpizza</u></p>
+
+                    </article>
+
+                </section>
+
+
+
+            </div>
+
+            <section id="section-2">
+                <p><span class="red-text"><strong>Nyhet!</strong></span><br>
+                    Vet du inte vad du ska laga för mat?</p>
+                <p>Fyll i följande formulär så kommer vi att skicka tillbaka en maträtt baserat på informationen du
+                    angett!</p>
+                <h2><i>Food finder</i></h2>
+
+                <form id="get-food-form">
+                    <h3>Mata in en</h3>
+                    <input type="text" placeholder="Ange ingrediens" id="ingredient">
+                    <button type="submit">Visa maträtt!</button>
+                </form>
+            </section>
+        </div>
+
     </main>
 
+    <hr>
     <div class="container">
         <h2>About Us</h2>
         <p>At Italian Pizza, we are passionate about serving the finest Italian pizza in town. Our delicious pizzas are
             made with the freshest ingredients and cooked to perfection in a traditional wood-fired oven.</p>
+        <p>footer</p>
     </div>
     <footer>
         &copy; 2023 Italian Pizza

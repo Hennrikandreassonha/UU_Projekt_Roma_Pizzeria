@@ -1,3 +1,26 @@
+import { getFood } from "./pizza-api.js";
+
+document.getElementById("get-food-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    const ingredientInput = document.getElementById("ingredient");
+    console.log(e)
+    // Call the getFood function here
+    if (ingredientInput != '') {
+        getFood(ingredientInput).then(jsonObject => {
+            console.log(jsonObject);
+        });
+    }
+
+    // If getFood() returns a Promise, you can handle it like this:
+    // getFood().then(response => {
+    //     // Handle the response here
+    // }).catch(error => {
+    //     // Handle any errors here
+    // })
+});
+
+
 let navElements = document.getElementById("main-nav").children;
 
 for (let c of navElements) {

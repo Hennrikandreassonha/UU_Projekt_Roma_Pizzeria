@@ -4,6 +4,9 @@
     --italian-white: #ffffff;
     --italian-black: #000000;
 }
+.red-text{
+    color:red;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -29,9 +32,12 @@ h1 {
     display: inline-block;
     font-size: 56px;
     color: white;
-    padding-right: 60px;
-    padding-left: 60px;
+
     padding: 20px 60px;
+    margin-right: 120px;
+
+    text-decoration: underline;
+    text-decoration-color: var(--italian-green);
 }
 
 #header-pic {
@@ -143,6 +149,22 @@ li {
     position: relative;
 }
 
+#grid-container {
+    display: grid;
+    grid-template:
+        "a b" auto / 3fr 1fr;
+    gap: 0.7rem;
+}
+
+#section-1{
+    border: 1px solid blue;
+}
+#section-2{
+    border: 1px solid red;
+}
+
+
+/* Footer and more things */
 .container {
     max-width: 800px;
     margin: 0 auto;
