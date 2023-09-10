@@ -1,4 +1,4 @@
-export async function getFood(ingredient, cuisine = " ", mealType = " ") {
+export async function getFood(ingredient, cuisine = undefined, mealType = undefined) {
 
     //This will return a list of json objects containing dishes.
     console.log(ingredient.value);
@@ -8,11 +8,11 @@ export async function getFood(ingredient, cuisine = " ", mealType = " ") {
 
     let apiEndpoint = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient.value}&app_id=af4aabde&app_key=27bea0fb7661816eb4e55a8e994f5e46%09`
 
-    if (cuisine != " ") {
-
+    if (cuisine != undefined) {
+        apiEndpoint += `&cuisineType=${cuisine.value}`;
     }
-    if (mealType != " ") {
-
+    if (mealType != undefined) {
+        apiEndpoint += `&mealType=${mealType.value}`;
     }
 
     const response = await fetch(apiEndpoint);
@@ -30,4 +30,14 @@ export function getRandomDish(jsonObjectList) {
 function getRandomIndex(listLength) {
     //Getting a random index that we use to get a dish.
     return Math.floor(Math.random() * listLength);
+}
+export function noIngredientAdded(){
+    const response = document.getElementById("food-widget-response");
+
+    let errmsg = document.createElement("p");
+    errmsg.textContent = "Fyll i en ingrediens!";
+    errmsg.classList.add("italian-red-text");
+
+    response.appendChild(errmsg);
+
 }

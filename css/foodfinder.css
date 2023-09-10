@@ -17,3 +17,15 @@ form{
     margin: auto;
     text-align: center;
 }
+
+#food-finder-section form
+{
+    margin: 0.2rem;
+}
+#get-food-form > *{
+    margin:0.4rem;
+}
+#food-finder-section h3, 
+#food-finder-section p{
+    margin:0.4rem;
+}

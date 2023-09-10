@@ -1,39 +1,41 @@
-import { getFood, getRandomDish } from "./pizza-api.js";
+import { getFood, getRandomDish, noIngredientAdded } from "./food-finder-widget.js";
 
 let foodForm = document.getElementById("get-food-form")
 
-if(foodForm != undefined){
+if (foodForm != undefined) {
     foodForm.addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent the default form submission behavior
-    
+
         let dish = "";
         const ingredientInput = document.getElementById("ingredient");
         const cuisineInput = document.getElementById("cuisineType");
         const mealTypeInput = document.getElementById("mealType");
 
-        console.log(e)
+        console.log(ingredientInput.value)
         // Call the getFood function here
-        if (ingredientInput != '') {
-    
+        if (ingredientInput.value !== '') {
+
             getFood(ingredientInput, cuisineInput, mealTypeInput).then(jsonObject => {
                 dish = getRandomDish(jsonObject);
-    
-    
+
+
                 console.log(dish);
-    
+
                 console.log(dish.recipe.images.REGULAR.url);
-    
+
                 let dishimg = document.createElement("img");
                 dishimg.src = dish.recipe.images.REGULAR.url;
-    
-                const response = document.getElementById("response");
-    
+
+                const response = document.getElementById("food-widget-response");
+
                 response.appendChild(dishimg);
             });
             // console.log(dish)
-    
         }
-    
+        else{
+            noIngredientAdded();
+        }
+
     });
 
 }

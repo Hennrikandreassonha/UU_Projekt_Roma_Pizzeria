@@ -50,41 +50,49 @@
         <h2><span class="italian-red-text">Food</span><span class="italian-green-text"> finder</span></h2>
 
         <section id="food-finder-section">
-            <h3>Har du svårt att bestämma vilken mat det blir idag?</h3>
+            <h3>Har <i>du</i> svårt att bestämma vilken mat det blir idag?</h3>
             <p>Då har du hittat <strong>rätt</strong>!</p>
             <p>
                 Ange helt enkelt vilken ingrediens du vill använda, de andra två kan lämnas tomma om inget annat önskas.
             </p>
             <form id="get-food-form">
-                <input type="text" placeholder="Ange ingrediens" id="ingredient">
 
+                <div>
+                    <label for="ingredient">Ange en ingrediens du vill använda i din mat*</label><br>
+                    <input name="ingredient" type="text" id="ingredient">
+                </div>
 
-                <label for="cuisineType">Vilket sorts mat är du sugen på?</label>
-                <select name="cuisineType" id="cuisineType">
-                    <option value="">Välj åt mig</option>
-                    <option value="american">Amerikanskt</option>
-                    <option value="asian">Asiatiskt</option>
-                    <option value="indian">Indiskt</option>
-                    <option value="nordic">Nordiskt</option>
-                    <option value="mexican">Mexikanskt</option>
+                <div>
+                    <label for="cuisineType">Vilket sorts mat är du sugen på?</label>
+                    <select name="cuisineType" id="cuisineType">
+                        <option value="">Välj åt mig</option>
+                        <option value="american">Amerikanskt</option>
+                        <option value="asian">Asiatiskt</option>
+                        <option value="indian">Indiskt</option>
+                        <option value="nordic">Nordiskt</option>
+                        <option value="mexican">Mexikanskt</option>
+    
+                    </select>
+                </div>
+                
 
-                </select>
-
-                <label for="mealType">Vilken typ av måltid vill du laga?</label>
-                <select name="mealType" id="mealType">
-                    <option value="">Välj åt mig</option>
-                    <option value="breakfast">Frukost</option>
-                    <option value="dinner">Middag</option>
-                    <option value="lunch">Lunch</option>
-                    <option value="snack">Mellanmål</option>
-                </select>
-
+                <div>
+                    <label for="mealType">Vilken typ av måltid vill du laga?</label>
+                    <select name="mealType" id="mealType">
+                        <option value="">Välj åt mig</option>
+                        <option value="breakfast">Frukost</option>
+                        <option value="dinner">Middag</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="snack">Mellanmål</option>
+                    </select>
+                </div>
+            
                 <button type="submit">Visa maträtt!</button>
             </form>
 
-            <div id="food-widget-response">
+            <section id="food-widget-response">
 
-            </div>
+            </section>
         </section>
     </main>
 </body>
