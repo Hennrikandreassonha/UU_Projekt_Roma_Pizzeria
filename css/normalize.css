@@ -55,6 +55,10 @@
     height: 0; /* 1 */
     overflow: visible; /* 2 */
   }
+  p,h2, h3{
+    margin:0px;
+    padding:0px;
+  }
   
   /**
    * 1. Correct the inheritance and scaling of font size in all browsers.

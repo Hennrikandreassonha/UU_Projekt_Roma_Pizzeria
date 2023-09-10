@@ -1,24 +1,39 @@
-import { getFood } from "./pizza-api.js";
+import { getFood, getRandomDish } from "./pizza-api.js";
 
-document.getElementById("get-food-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission behavior
+let foodForm = document.getElementById("get-food-form")
 
-    const ingredientInput = document.getElementById("ingredient");
-    console.log(e)
-    // Call the getFood function here
-    if (ingredientInput != '') {
-        getFood(ingredientInput).then(jsonObject => {
-            console.log(jsonObject);
-        });
-    }
+if(foodForm != undefined){
+    foodForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+    
+        let dish = "";
+        const ingredientInput = document.getElementById("ingredient");
+        console.log(e)
+        // Call the getFood function here
+        if (ingredientInput != '') {
+    
+            getFood(ingredientInput).then(jsonObject => {
+                dish = getRandomDish(jsonObject);
+    
+    
+                console.log(dish);
+    
+                console.log(dish.recipe.images.REGULAR.url);
+    
+                let dishimg = document.createElement("img");
+                dishimg.src = dish.recipe.images.REGULAR.url;
+    
+                const response = document.getElementById("response");
+    
+                response.appendChild(dishimg);
+            });
+            // console.log(dish)
+    
+        }
+    
+    });
 
-    // If getFood() returns a Promise, you can handle it like this:
-    // getFood().then(response => {
-    //     // Handle the response here
-    // }).catch(error => {
-    //     // Handle any errors here
-    // })
-});
+}
 
 
 let navElements = document.getElementById("main-nav").children;

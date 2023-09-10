@@ -7,7 +7,16 @@
 .red-text{
     color:red;
 }
+.italian-red-text{
+    color: var(--italian-red);
+}
+.italian-green-text{
+    color: var(--italian-green);
+}
 
+html{
+    background-color: rgb(211, 211, 211);
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin: auto;
@@ -39,7 +48,13 @@ h1 {
     text-decoration: underline;
     text-decoration-color: var(--italian-green);
 }
+h2{
+    font-size: 34px;
+    text-decoration: underline;
+    text-align: center;
+    /* text-decoration-color: var(--italian-green); */
 
+}
 #header-pic {
     width: 120px;
     transition: all 0.8s ease;
@@ -73,8 +88,6 @@ h1 {
         transform: rotate(0deg);
     }
 }
-
-
 .special-text {
     font-family: 'Pacifico', cursive;
     /* ... (other styles) ... */
@@ -113,13 +126,15 @@ nav a {
 }
 
 #home-nav img {
-    right: 35px;
-
+    right: 40px;
+}
+#find-food-nav img{
+    right:85px;
 }
 
 
 .cover-div {
-    width:700px;
+    width:800px;
     /* Fixa */
     left: -80px;
     height: 43px;
@@ -149,6 +164,9 @@ li {
     position: relative;
 }
 
+main{
+    padding:1rem;
+}
 #grid-container {
     display: grid;
     grid-template:

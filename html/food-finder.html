@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/foodfinder.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700|Playfair+Display:400,700|Pacifico&display=swap">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="/js/main.js" type="module"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="/icons/coliseum.png" id="header-pic" alt="Coluseum with italian flag">
+        <h1>Roma Pizzeria</h1>
+    </header>
+
+    <nav>
+        <ul id="main-nav">
+
+            <li id="home-nav"><a href="/html/index.html">Hem</a>
+                <div class="cover-div"></div>
+                <img src="/icons/pizza.png" class="nav-icon" alt="Home">
+            </li>
+
+            <li id="menu-nav"><a href="/html/menu.html">Meny</a>
+                <img src="/icons/menu.png" class="nav-icon" alt="Home">
+            </li>
+
+            <li id="order-online-nav"><a href="/html/order-pizza.html">Beställ din pizza</a>
+                <img src="/icons/delivery-man.png" class="nav-icon" alt="Home">
+            </li>
+
+            <li><a href="/html/history.html">Vår historia</a>
+                <img src="/icons/history.png" class="nav-icon" alt="Home">
+            </li>
+
+            <li id="find-food-nav"><a href="/html/food-finder.html">Food finder</a>
+                <img src="/icons/food-find.png" class="nav-icon" alt="Some food">
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2><span class="italian-red-text">Food</span><span class="italian-green-text"> finder</span></h2>
+
+        <section id="food-finder-section">
+            <h3>Har du svårt att bestämma vilken mat det blir idag?</h3>
+            <p>Då har du hittat <strong>rätt</strong>!</p>
+            <p>
+                Ange helt enkelt vilken ingrediens du vill använda, de andra två kan lämnas tomma om inget annat önskas.
+            </p>
+            <form id="get-food-form">
+                <input type="text" placeholder="Ange ingrediens" id="ingredient">
+
+
+                <label for="cuisineType">Vilket sorts mat är du sugen på?</label>
+                <select name="cuisineType" id="cuisineType">
+                    <option value="">Välj åt mig</option>
+                    <option value="american">Amerikanskt</option>
+                    <option value="asian">Asiatiskt</option>
+                    <option value="indian">Indiskt</option>
+                    <option value="nordic">Nordiskt</option>
+                    <option value="mexican">Mexikanskt</option>
+
+                </select>
+
+                <label for="mealType">Vilken typ av måltid vill du laga?</label>
+                <select name="mealType" id="mealType">
+                    <option value="">Välj åt mig</option>
+                    <option value="breakfast">Frukost</option>
+                    <option value="dinner">Middag</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="snack">Mellanmål</option>
+                </select>
+
+                <button type="submit">Visa maträtt!</button>
+            </form>
+
+            <div id="response">
+
+            </div>
+        </section>
+    </main>
+</body>
