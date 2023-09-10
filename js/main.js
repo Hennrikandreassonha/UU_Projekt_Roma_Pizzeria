@@ -8,11 +8,14 @@ if(foodForm != undefined){
     
         let dish = "";
         const ingredientInput = document.getElementById("ingredient");
+        const cuisineInput = document.getElementById("cuisineType");
+        const mealTypeInput = document.getElementById("mealType");
+
         console.log(e)
         // Call the getFood function here
         if (ingredientInput != '') {
     
-            getFood(ingredientInput).then(jsonObject => {
+            getFood(ingredientInput, cuisineInput, mealTypeInput).then(jsonObject => {
                 dish = getRandomDish(jsonObject);
     
     
