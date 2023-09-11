@@ -1,4 +1,4 @@
-import { getFood, getRandomDish, noIngredientAdded } from "./food-finder-widget.js";
+import { getFood, getRandomDish, noIngredientAdded, addElementsToWidget } from "./food-finder-widget.js";
 
 let foodForm = document.getElementById("get-food-form")
 
@@ -15,24 +15,15 @@ if (foodForm != undefined) {
         // Call the getFood function here
         if (ingredientInput.value !== '') {
 
+            
             getFood(ingredientInput, cuisineInput, mealTypeInput).then(jsonObject => {
                 dish = getRandomDish(jsonObject);
 
-
-                console.log(dish);
-
-                console.log(dish.recipe.images.REGULAR.url);
-
-                let dishimg = document.createElement("img");
-                dishimg.src = dish.recipe.images.REGULAR.url;
-
-                const response = document.getElementById("food-widget-response");
-
-                response.appendChild(dishimg);
+                addElementsToWidget(dish);
             });
             // console.log(dish)
         }
-        else{
+        else {
             noIngredientAdded();
         }
 
