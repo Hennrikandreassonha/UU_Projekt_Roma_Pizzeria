@@ -1,5 +1,15 @@
 import { getFood, getRandomDish, noIngredientAdded, addElementsToWidget } from "./food-finder-widget.js";
 
+import { orderPizza } from "./order-pizza.js";
+
+let orderFoodForm = document.getElementById("order-pizza-form");
+
+if (orderFoodForm != undefined) {
+    orderPizza();
+}
+
+
+
 let foodForm = document.getElementById("get-food-form")
 
 if (foodForm != undefined) {

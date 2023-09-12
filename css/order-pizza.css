@@ -1,0 +1,11 @@
+
+#order-pizza-form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+article h3{
+    text-align: center;
+}

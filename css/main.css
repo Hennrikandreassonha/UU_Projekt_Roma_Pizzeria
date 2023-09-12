@@ -225,3 +225,51 @@ footer p {
     color: var(--italian-white);
     margin: 0.2rem;
 }
+
+/* Css for the form */
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+
+select option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: var(--italian-red);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:auto;
+}
+
+/* Style the submit button on hover */
+button[type="submit"]:hover {
+    filter: brightness(1.1);
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+/* Style the submit button on hover */
+input[type="text"]:hover {
+    border-color: var(--italian-red); /* Change border color on hover */
+}

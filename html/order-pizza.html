@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/order-pizza.css">
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700|Playfair+Display:400,700|Pacifico&display=swap">
     <link rel="stylesheet" href="/css/normalize.css">
@@ -43,7 +46,83 @@
 
         </ul>
     </nav>
-<main>
-    <h2><span class="italian-red-text">Beställ</span> <span class="italian-green-text">Pizza</span></h2>
-</main>
+    <main>
+        <h2><span class="italian-red-text">Beställ</span> <span class="italian-green-text">Pizza</span></h2>
+        <hr>
+
+        <section>
+            <article>
+
+                <h3>Välj <span class="italian-red-text">pizza</span> och <span class="italian-green-text">tillbehör</span></h3>
+
+                <form id="order-pizza-form">
+                    <div>
+
+                        <select name="pizzaSelect" id="pizzaSelect">
+                            <option value="">Välj åt mig</option>
+                            <option value="Margarita">Margarita</option>
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Vesuvio">Vesuvio</option>
+                            <option value="Calzone">Calzone</option>
+                            <option value="Quattro Stagioni (Four Seasons)">Quattro Stagioni (Four Seasons)</option>
+                            <option value="Fungi">Fungi</option>
+                            <option value="Capricciosa">Capricciosa</option>
+                            <option value="Prosciutto e Funghi">Prosciutto e Funghi</option>
+                            <option value="Marinara">Marinara</option>
+                            <option value="Frutti di Mare (Seafood)">Frutti di Mare (Seafood)</option>
+                            <option value="Vegetariana">Vegetariana</option>
+                            <option value="Quattro Formaggi (Four Cheese)">Quattro Formaggi (Four Cheese)</option>
+                            <option value="Picante">Picante</option>
+                            <option value="Pollo BBQ (BBQ Chicken)">Pollo BBQ (BBQ Chicken)</option>
+                            <option value="Rustica">Rustica</option>
+                            <option value="Gorgonzola">Gorgonzola</option>
+                            <option value="Primavera">Primavera</option>
+                            <option value="Tonno (Tuna)">Tonno (Tuna)</option>
+                            <option value="Salami">Salami</option>
+                        </select>
+
+                        <select name="drinkSelect" id="drinkSelect">
+                            <option value="">Välj dryck</option>
+                            <option value="water">Vatten</option>
+                            <option value="soda">Läsk</option>
+                            <option value="juice">Juice</option>
+                            <option value="coffee">Kaffe</option>
+                            <option value="tea">Te</option>
+                            <option value="beer">Öl</option>
+                            <option value="wine">Vin</option>
+                        </select>
+
+                        <select name="sideSelect" id="sideSelect">
+                            <option value="">Välj tillbehör</option>
+                            <option value="fries">Pommes Frites</option>
+                            <option value="salad">Sallad</option>
+                            <option value="garlic-bread">Vitlöksbröd</option>
+                            <option value="mozzarella-sticks">Mozzarellasticks</option>
+                            <option value="onion-rings">Lökringar</option>
+                            <option value="wings">Kycklingvingar</option>
+                            <option value="breadsticks">Brödpinnar</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Lägg till i varukorg</button>
+                </form>
+            </article>
+
+            <article id="current-order">
+
+            </article>
+
+        </section>
+        
+    </main>
+
+    <footer>
+
+        <p>&copy; 2023 Italian Pizza</p>
+
+        <p>Storgatan 6, 463 30 Lilla Edet</p>
+
+        <p>Tel: 0520-65 77 33</p>
+    </footer>
 </body>

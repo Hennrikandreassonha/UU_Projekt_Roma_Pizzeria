@@ -1,0 +1,83 @@
+#welcome-msg p {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+#news {
+    display: flex;
+    flex-direction: column;
+}
+
+#news article {
+    border: 2px solid var(--italian-green);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#news h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#news h4 {
+    text-align: center;
+
+}
+
+#news p {
+    margin: 0.5rem;
+}
+
+.index-pic {
+    width: 500px;
+}
+
+.index-pic {
+    min-width: 350px;
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+/* Css for the awards section */
+#award-grid {
+    display: grid;
+    /* height: 400px; */
+    grid-template:
+        "a b" auto
+        "c d" auto / 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.award-article {
+    border: 2px solid var(--italian-green);
+    border-radius: 10px;
+    padding: 1rem 0px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.award-article img,
+#news img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    border-radius: 19px;
+}
+
+.award-article h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.award-article p {
+    padding: 0px 1rem;
+}
