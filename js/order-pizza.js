@@ -96,7 +96,6 @@ function insertHeader(currentOrderElement) {
 function showTable() {
     let orderTable = document.querySelector("#order-table");
 
-    console.log(orderTable);
     if (orderTable.classList.contains("hide-element")) {
         orderTable.classList.remove("hide-element");
         orderTable.classList.add("show-element");
@@ -106,7 +105,6 @@ function hideTable(){
 
     let orderTable = document.querySelector("#order-table");
 
-    console.log(orderTable);
     if (orderTable.classList.contains("show-element")) {
         orderTable.classList.add("hide-element");
         orderTable.classList.remove("show-element");

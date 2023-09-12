@@ -19,9 +19,7 @@ if (foodForm != undefined) {
         const ingredientInput = document.getElementById("ingredient");
         const cuisineInput = document.getElementById("cuisineType");
         const mealTypeInput = document.getElementById("mealType");
-
-        console.log(ingredientInput.value)
-        // Call the getFood function here
+        
         if (ingredientInput.value !== '') {
 
             
@@ -30,7 +28,6 @@ if (foodForm != undefined) {
 
                 addElementsToWidget(dish);
             });
-            // console.log(dish)
         }
         else {
             noIngredientAdded();

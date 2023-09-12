@@ -65,8 +65,6 @@ h2 {
     font-size: 34px;
     text-decoration: underline;
     text-align: center;
-    /* text-decoration-color: var(--italian-green); */
-
 }
 
 h3 {
@@ -78,7 +76,6 @@ h3 {
     transition: all 0.8s ease;
     margin-top: 20px;
     animation-delay: 0.5s;
-
 }
 
 #header-pic:hover {
@@ -109,7 +106,6 @@ h3 {
 
 .special-text {
     font-family: 'Pacifico', cursive;
-    /* ... (other styles) ... */
 }
 
 nav {
@@ -227,7 +223,6 @@ main {
     border: 1px solid red;
 }
 
-
 /* Footer and more things */
 .container {
     max-width: 800px;
@@ -253,7 +248,6 @@ footer p {
 }
 
 /* Css for the form */
-
 select {
     padding: 10px;
     font-size: 16px;
@@ -262,7 +256,6 @@ select {
     max-width: 500px;
     margin-bottom: 15px;
 }
-
 
 select option {
     padding: 10px;

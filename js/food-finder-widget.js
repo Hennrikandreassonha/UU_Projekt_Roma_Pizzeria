@@ -1,17 +1,10 @@
 export async function getFood(ingredient, cuisine = undefined, mealType = undefined) {
 
     //This will return a list of json objects containing dishes.
-    console.log(ingredient.value);
-    console.log(cuisine.value);
-    console.log(mealType.value);
-
-
     let apiEndpoint = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient.value}&app_id=af4aabde&app_key=27bea0fb7661816eb4e55a8e994f5e46%09`
 
     if (cuisine.value.length > 0) {
         apiEndpoint += `&cuisineType=${cuisine.value}`;
-
-        console.log("cuisine")
     }
     if (mealType.value.length > 0) {
         apiEndpoint += `&mealType=${mealType.value}`;
@@ -98,7 +91,6 @@ export function addElementsToWidget(dish) {
 function getNewDishElement() {
 
     let response = document.getElementById("get-food-form");
-    console.log(response.querySelector("#new-msg"));
 
     let errMsgToRemove = document.getElementById("errmsg-element");
 

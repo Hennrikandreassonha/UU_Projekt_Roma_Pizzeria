@@ -10,9 +10,7 @@ form{
 }
 
 #food-finder-section{
-    /* border: 1px solid black; */
     padding: 1rem;
-
     width:80%;
     margin: auto;
     text-align: center;
@@ -31,9 +29,7 @@ form{
 }
 
 /* Css for the response */
-
 .food-widget-response-active{
-    /* border: 1px solid black; */
     padding: 2rem;
     width:80%;
     margin:auto;
