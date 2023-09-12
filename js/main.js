@@ -8,8 +8,6 @@ if (orderFoodForm != undefined) {
     orderPizza();
 }
 
-
-
 let foodForm = document.getElementById("get-food-form")
 
 if (foodForm != undefined) {

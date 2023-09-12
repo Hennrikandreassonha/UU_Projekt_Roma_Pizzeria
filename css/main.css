@@ -243,7 +243,7 @@ select option {
     font-size: 16px;
 }
 
-button[type="submit"] {
+button{
     background-color: var(--italian-red);
     color: white;
     padding: 10px 20px;
@@ -272,4 +272,7 @@ input[type="text"] {
 /* Style the submit button on hover */
 input[type="text"]:hover {
     border-color: var(--italian-red); /* Change border color on hover */
+}
+.hide-element{
+    display: none;
 }

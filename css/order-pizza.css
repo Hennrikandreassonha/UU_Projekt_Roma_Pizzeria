@@ -1,11 +1,49 @@
-
-#order-pizza-form{
+#order-pizza-form {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
 }
-article h3{
+
+article h3 {
     text-align: center;
+}
+
+#current-order h3{
+    margin:1rem;
+}
+
+#current-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+#order-table {
+    width: 100%;
+}
+
+#order-table td,
+#order-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#order-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#order-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+.show-table-element{
+    display: table;
+}
+.confirm-msg{
+    margin:1rem;
 }

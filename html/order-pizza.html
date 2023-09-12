@@ -53,13 +53,14 @@
         <section>
             <article>
 
-                <h3>Välj <span class="italian-red-text">pizza</span> och <span class="italian-green-text">tillbehör</span></h3>
+                <h3>Välj <span class="italian-red-text">pizza</span> och <span
+                        class="italian-green-text">tillbehör</span></h3>
 
                 <form id="order-pizza-form">
                     <div>
 
                         <select name="pizzaSelect" id="pizzaSelect">
-                            <option value="">Välj åt mig</option>
+                            <option value="">Välj pizza</option>
                             <option value="Margarita">Margarita</option>
                             <option value="Pepperoni">Pepperoni</option>
                             <option value="Hawaii">Hawaii</option>
@@ -84,24 +85,24 @@
 
                         <select name="drinkSelect" id="drinkSelect">
                             <option value="">Välj dryck</option>
-                            <option value="water">Vatten</option>
-                            <option value="soda">Läsk</option>
-                            <option value="juice">Juice</option>
-                            <option value="coffee">Kaffe</option>
-                            <option value="tea">Te</option>
-                            <option value="beer">Öl</option>
-                            <option value="wine">Vin</option>
+                            <option value="Vatten">Vatten</option>
+                            <option value="Läsk">Läsk</option>
+                            <option value="Juice">Juice</option>
+                            <option value="Kaffe">Kaffe</option>
+                            <option value="Te">Te</option>
+                            <option value="Öl">Öl</option>
+                            <option value="Vin">Vin</option>
                         </select>
 
                         <select name="sideSelect" id="sideSelect">
                             <option value="">Välj tillbehör</option>
-                            <option value="fries">Pommes Frites</option>
-                            <option value="salad">Sallad</option>
-                            <option value="garlic-bread">Vitlöksbröd</option>
-                            <option value="mozzarella-sticks">Mozzarellasticks</option>
-                            <option value="onion-rings">Lökringar</option>
-                            <option value="wings">Kycklingvingar</option>
-                            <option value="breadsticks">Brödpinnar</option>
+                            <option value="Pommes Frites">Pommes Frites</option>
+                            <option value="Sallad">Sallad</option>
+                            <option value="Vitlöksbröd">Vitlöksbröd</option>
+                            <option value="Mozzarellasticks">Mozzarellasticks</option>
+                            <option value="Lökringar">Lökringar</option>
+                            <option value="Kycklingvingar">Kycklingvingar</option>
+                            <option value="Brödpinnar">Brödpinnar</option>
                         </select>
                     </div>
 
@@ -110,11 +111,19 @@
             </article>
 
             <article id="current-order">
+        
+                <table id="order-table" class="hide-element">
+                    <tr>
+                        <th>Pizza</th>
+                        <th>Dricka</th>
+                        <th>Tillbehör</th>
+                    </tr>
+                </table>
 
             </article>
-
         </section>
-        
+
+       
     </main>
 
     <footer>
