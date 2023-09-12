@@ -1,0 +1,45 @@
+#pizza-menu {
+    border: 1px solid var(--italian-red);
+    padding: 2rem;
+    text-align: center;
+}
+
+#pizza-menu li{
+    padding: 0px;
+    border-radius: 10px;
+}
+.pizza-menu-ul{
+    padding:0px;
+}
+.pizza-menu-ul > li:hover{
+    transform: scale(1.2);
+}
+.pizza-menu-ul > li:nth-child(odd){
+    border: 2px solid var(--italian-red);
+
+}
+.pizza-menu-ul > li:nth-child(even){
+    border: 2px solid var(--italian-green);
+
+}
+.pizza-li-item {
+    list-style: none;
+    /* display: in; */
+    padding: 0.5rem;
+    border: 1px solid black;
+    max-width: 500px;
+    margin: 0.5rem auto;
+}
+.pizza-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.pizza-info{
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}

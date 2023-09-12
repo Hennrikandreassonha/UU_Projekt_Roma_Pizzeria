@@ -1,0 +1,22 @@
+#history-section h3,
+#history-section p{
+    margin:1rem;
+}
+#welcome-text{
+    text-align: center;
+    font-weight: bold;
+}
+#pizza-makers{
+    min-width:350px;
+    max-width:400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 60%; */
+}
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This centers the image vertically */
+  }
