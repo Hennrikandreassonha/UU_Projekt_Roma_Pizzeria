@@ -16,7 +16,6 @@
 }
 .pizza-menu-ul > li:nth-child(odd){
     border: 2px solid var(--italian-red);
-
 }
 .pizza-menu-ul > li:nth-child(even){
     border: 2px solid var(--italian-green);

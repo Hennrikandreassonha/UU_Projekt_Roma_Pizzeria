@@ -44,7 +44,9 @@ header {
     text-align: center;
     z-index: 1;
 }
-
+a{
+    color:  #eb2121;
+}
 h1 {
     display: inline-block;
     font-size: 56px;
