@@ -19,7 +19,7 @@ export function orderPizza() {
             showTable(currentOrder);
             insertItems(currentOrder);
             insertOrderBtn(currentOrder);
-
+            removeConfirmMsg();
             orderFoodForm.reset();
         }
     });
@@ -31,6 +31,8 @@ function insertOrderBtn(currentOrderElement) {
         let orderBtn = document.createElement("button");
         orderBtn.textContent = "Beställ";
         orderBtn.id = "order-btn"
+        orderBtn.classList.add("to-remove");
+
 
         currentOrderElement.appendChild(orderBtn);
 
@@ -39,38 +41,60 @@ function insertOrderBtn(currentOrderElement) {
 }
 function makeOrder() {
     const currentOrder = document.getElementById("current-order");
-    clearOrder(currentOrder);
+    clearOrder();
+    hideTable();
 
-    let orderConfirm = document.createElement("p");
-    orderConfirm.textContent = "Tack för din beställning!";
-    orderConfirm.classList.add("bold-text");
-    orderConfirm.classList.add("confirm-msg");
+    if (currentOrder.querySelector("#confirm-msg") == undefined) {
 
-    orderConfirm.style.textDecoration = "underline";
+        let orderConfirm = document.createElement("p");
+        orderConfirm.textContent = "Tack för din beställning!";
+        orderConfirm.classList.add("bold-text");
+        orderConfirm.classList.add("confirm-msg");
+        orderConfirm.classList.add("to-remove");
 
-    currentOrder.appendChild(orderConfirm);
-}
-function clearOrder(currentOrder) {
-    //Need to clear response section if user clicks submit again.
-    while (currentOrder.firstChild) {
-        currentOrder.removeChild(currentOrder.firstChild);
+        orderConfirm.id = "confirm-msg";
+
+        orderConfirm.style.textDecoration = "underline";
+
+        currentOrder.appendChild(orderConfirm);
     }
 }
+function removeConfirmMsg(){
+    let confirmMsg = document.querySelector("#confirm-msg");
+
+    if(confirmMsg != undefined){
+
+        confirmMsg.remove();
+    }
+}
+function clearOrder() {
+ //Clearing response so that user can make new order.
+
+const orderRows = document.querySelectorAll(".to-remove");
+
+// Iterate through the NodeList and remove each element
+for (let i = 0; i < orderRows.length; i++) {
+    const orderRow = orderRows[i];
+    orderRow.parentNode.removeChild(orderRow);
+}
+}
+
 function insertHeader(currentOrderElement) {
 
     if (currentOrderElement.querySelector("#order-header") == undefined) {
         var firstChild = currentOrderElement.firstChild;
 
         let currentOrderHeader = document.createElement("h3");
-        currentOrderHeader.id = "order-header"
+        currentOrderHeader.id = "order-header";
+        currentOrderHeader.classList.add("to-remove");
 
         currentOrderHeader.textContent = "Din beställning:";
 
         currentOrderElement.insertBefore(currentOrderHeader, firstChild);
     }
 }
-function showTable(currentOrderElement) {
-    let orderTable = currentOrderElement.querySelector("#order-table");
+function showTable() {
+    let orderTable = document.querySelector("#order-table");
 
     console.log(orderTable);
     if (orderTable.classList.contains("hide-element")) {
@@ -78,7 +102,16 @@ function showTable(currentOrderElement) {
         orderTable.classList.add("show-element");
     }
 }
+function hideTable(){
 
+    let orderTable = document.querySelector("#order-table");
+
+    console.log(orderTable);
+    if (orderTable.classList.contains("show-element")) {
+        orderTable.classList.add("hide-element");
+        orderTable.classList.remove("show-element");
+    }
+}
 function insertItems(currentOrderElement) {
 
     //Inserts items into the "current order"
@@ -89,7 +122,7 @@ function insertItems(currentOrderElement) {
     let orderTable = currentOrderElement.querySelector("#order-table")
 
     let trElement = document.createElement("tr");
-
+    trElement.className ="to-remove";
     let pizzaTd = document.createElement("td");
     let drinkTd = document.createElement("td");
     let sidesTd = document.createElement("td");

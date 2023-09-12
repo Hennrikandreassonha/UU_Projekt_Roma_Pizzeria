@@ -30,12 +30,8 @@
     margin: 0.5rem;
 }
 
-.index-pic {
-    width: 500px;
-}
 
 .index-pic {
-    min-width: 350px;
     max-width: 400px;
     display: block;
     margin-left: auto;
@@ -47,12 +43,20 @@
 /* Css for the awards section */
 #award-grid {
     display: grid;
-    /* height: 400px; */
     grid-template:
         "a b" auto
         "c d" auto / 1fr 1fr;
     gap: 1rem;
     margin: 1rem auto;
+}
+@media (max-width: 850px) {
+    #award-grid{
+        grid-template:
+        "a" auto
+        "b" auto 
+        "c" auto
+        "d" auto / 100%;
+    }
 }
 
 .award-article {

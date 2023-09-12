@@ -22,12 +22,14 @@ article h3 {
 }
 #order-table {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 #order-table td,
 #order-table th {
     border: 1px solid #ddd;
     padding: 8px;
+    width: 33%;
 }
 
 #order-table tr:nth-child(even) {

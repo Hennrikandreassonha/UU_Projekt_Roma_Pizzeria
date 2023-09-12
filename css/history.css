@@ -7,11 +7,15 @@
     font-weight: bold;
 }
 #pizza-makers{
-    min-width:350px;
     max-width:400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    /* width: 60%; */
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    #pizza-makers{
+        width:100%;
+    }
 }

@@ -44,9 +44,11 @@ header {
     text-align: center;
     z-index: 1;
 }
-a{
-    color:  #eb2121;
+
+a {
+    color: #eb2121;
 }
+
 h1 {
     display: inline-block;
     font-size: 56px;
@@ -150,18 +152,39 @@ nav a {
     right: 85px;
 }
 
+@media (max-width: 800px) {
+    #main-nav img {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0px;
+    }
+    .cover-div{
+        display: none;
+    }
+    .index-pic{
+        width:100% ;
+    }
+}
+@media (max-width: 500px){
+    #main-nav{
+        flex-direction: column;
+    }
+    #main-nav li{
+        padding:0.2rem;
+    }
+}
 
 .cover-div {
     width: 800px;
-    /* Fixa */
     left: -80px;
     height: 43px;
     z-index: 3;
     background-color: var(--italian-red);
     bottom: 33px;
-    /* right: 10px; */
     position: absolute;
-
 }
 
 #main-nav {
@@ -170,7 +193,6 @@ nav a {
     max-width: 800px;
     margin: auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 0px;
 
@@ -243,7 +265,7 @@ select option {
     font-size: 16px;
 }
 
-button{
+button {
     background-color: var(--italian-red);
     color: white;
     padding: 10px 20px;
@@ -252,11 +274,11 @@ button{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin:auto;
+    margin: 0.5rem auto;
 }
 
 /* Style the submit button on hover */
-button[type="submit"]:hover {
+button:hover {
     filter: brightness(1.1);
 }
 
@@ -271,8 +293,15 @@ input[type="text"] {
 
 /* Style the submit button on hover */
 input[type="text"]:hover {
-    border-color: var(--italian-red); /* Change border color on hover */
+    border-color: var(--italian-red);
+    /* Change border color on hover */
 }
-.hide-element{
-    display: none;
+
+.hide-element {
+    opacity: 0;
+}
+
+.show-element {
+    opacity: 1;
+
 }
