@@ -161,19 +161,23 @@ nav a {
         text-align: center;
         margin: 0px;
     }
-    .cover-div{
+
+    .cover-div {
         display: none;
     }
-    .index-pic{
-        width:100% ;
+
+    .index-pic {
+        width: 100%;
     }
 }
-@media (max-width: 500px){
-    #main-nav{
+
+@media (max-width: 500px) {
+    #main-nav {
         flex-direction: column;
     }
-    #main-nav li{
-        padding:0.2rem;
+
+    #main-nav li {
+        padding: 0.2rem;
     }
 }
 
@@ -265,6 +269,7 @@ select option {
     font-size: 16px;
 }
 
+/* Button styling */
 button {
     background-color: var(--italian-red);
     color: white;
@@ -277,7 +282,6 @@ button {
     margin: 0.5rem auto;
 }
 
-/* Style the submit button on hover */
 button:hover {
     filter: brightness(1.1);
 }
@@ -291,10 +295,8 @@ input[type="text"] {
     margin-bottom: 15px;
 }
 
-/* Style the submit button on hover */
 input[type="text"]:hover {
     border-color: var(--italian-red);
-    /* Change border color on hover */
 }
 
 .hide-element {
@@ -303,5 +305,12 @@ input[type="text"]:hover {
 
 .show-element {
     opacity: 1;
+}
 
+.display-none {
+    display: none;
+}
+
+.dispay-flex {
+    display: flex;
 }

@@ -4,15 +4,12 @@
 }
 
 #pizza-menu li{
-    padding: 0px;
     border-radius: 10px;
 }
 .pizza-menu-ul{
     padding:0px;
 }
-.pizza-menu-ul > li:hover{
-    transform: scale(1.2);
-}
+
 .pizza-menu-ul > li:nth-child(odd){
     border: 2px solid var(--italian-red);
 }
@@ -33,8 +30,10 @@
     font-weight: bold;
 }
 .pizza-info{
+    flex-direction: column;
     list-style: none;
     text-align: center;
     align-items: center;
     margin: 0px;
+    padding:0px;
 }

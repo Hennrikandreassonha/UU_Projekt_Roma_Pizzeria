@@ -1,6 +1,7 @@
 import { getFood, getRandomDish, noIngredientAdded, addElementsToWidget } from "./food-finder-widget.js";
 
 import { orderPizza } from "./order-pizza.js";
+import { viewPizza } from "./menu.js";
 
 let orderFoodForm = document.getElementById("order-pizza-form");
 
@@ -34,11 +35,8 @@ if (foodForm != undefined) {
         else {
             noIngredientAdded();
         }
-
     });
-
 }
-
 
 let navElements = document.getElementById("main-nav").children;
 
@@ -68,7 +66,14 @@ function hideNavIcon(liElement) {
     let navIcon = liElement.getElementsByTagName("img")[0];
 
     if (navIcon) {
-
         navIcon.style.transform = 'translateY(0)';
     }
 }
+
+let menuItems = document.querySelectorAll(".pizza-li-item");
+
+menuItems.forEach(element => {
+    element.addEventListener("click", function() {
+        viewPizza(element);
+    });
+});
