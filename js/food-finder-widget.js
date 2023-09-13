@@ -49,7 +49,12 @@ const response = document.getElementById("food-widget-response");
 
 export function addElementsToWidget(dish) {
     clearRespone();
-
+    if (dish === undefined) {
+        let responseHeaderElement = document.createElement("h3");
+        response.appendChild(responseHeaderElement);
+        responseHeaderElement.textContent = `Inget recept hittades, ange ny ingrediens`;
+        return;
+    }
     let dishImg = dish.recipe.images.REGULAR.url;
     let dishLabel = dish.recipe.label;
     let cuisineType = dish.recipe.cuisineType[0];
