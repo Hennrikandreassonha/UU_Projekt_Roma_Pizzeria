@@ -13,7 +13,7 @@ let foodForm = document.getElementById("get-food-form")
 
 if (foodForm != undefined) {
     foodForm.addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent the default form submission behavior
+        e.preventDefault();
 
         let dish = "";
         const ingredientInput = document.getElementById("ingredient");
