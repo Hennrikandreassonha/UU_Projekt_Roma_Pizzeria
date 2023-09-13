@@ -1,7 +1,6 @@
 export function viewPizza(clickedPizza) {
     // Clicking the pizza will expand the li and show ingredients.
-    console.log(clickedPizza);
-
+    
     let pizzaInfoUl = clickedPizza.querySelector(".pizza-info");
 
     if (pizzaInfoUl.classList.contains("display-none")) {
