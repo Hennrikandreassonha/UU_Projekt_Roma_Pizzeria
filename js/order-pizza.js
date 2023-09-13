@@ -33,7 +33,6 @@ function insertOrderBtn(currentOrderElement) {
         orderBtn.id = "order-btn"
         orderBtn.classList.add("to-remove");
 
-
         currentOrderElement.appendChild(orderBtn);
 
         orderBtn.addEventListener("click", makeOrder);
